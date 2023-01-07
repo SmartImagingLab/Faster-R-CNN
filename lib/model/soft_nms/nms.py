@@ -57,17 +57,15 @@ def nmsp(dets):
     thresh = 0.7
     if dets.shape[0] == 0:
         return []
-
     x1 = dets[:, 0]
     y1 = dets[:, 1]
     x2 = dets[:, 2]
     y2 = dets[:, 3]
     scores = dets[:, 4]
-
     areas = (x2 - x1 + 1) * (y2 - y1 + 1)
     order = scores.argsort()[::-1]
-
     keep = []
+
     while order.size > 0:
         i = order[0]
         keep.append(i)
@@ -75,15 +73,12 @@ def nmsp(dets):
         yy1 = np.maximum(y1[i], y1[order[1:]])
         xx2 = np.minimum(x2[i], x2[order[1:]])
         yy2 = np.minimum(y2[i], y2[order[1:]])
-
         w = np.maximum(0.0, xx2 - xx1 + 1)
         h = np.maximum(0.0, yy2 - yy1 + 1)
         inter = w * h
         ovr = inter / (areas[i] + areas[order[1:]] - inter)
-
         inds = np.where(ovr <= thresh)[0]
         order = order[inds + 1]
-
     return keep
 
 
@@ -100,7 +95,6 @@ def nms(dets, thresh=0.2):
     # keep = cpu_nms(np.ascontiguousarray(dets, dtype=np.float32), np.float(thresh))  # 使用cpu_nms()
     if dets.shape[0] == 0:
         return []
-
     x1 = dets[:, 0]
     y1 = dets[:, 1]
     x2 = dets[:, 2]
@@ -111,7 +105,6 @@ def nms(dets, thresh=0.2):
     areas = (x2 - x1 + 1) * (y2 - y1 + 1)
     # scores = scores.cpu().numpy()
     order = scores.argsort()[::-1]
-
     keep = []
     while order.size > 0:
         i = order[0]
