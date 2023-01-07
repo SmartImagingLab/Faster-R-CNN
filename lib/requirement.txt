@@ -1,0 +1,6 @@
+numpy
+easydict
+astropy
+scipy
+imageio
+opencv-python

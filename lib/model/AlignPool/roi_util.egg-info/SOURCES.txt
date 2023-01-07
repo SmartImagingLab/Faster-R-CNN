@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/vision.cpp
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/cpu/ROIAlign_cpu.cpp
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/cpu/nms_cpu.cpp
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/cuda/ROIAlign_cuda.cu
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/cuda/ROIPool_cuda.cu
+/home/dell460/slc/sdd_01/Faster_mul/label_de/lib/model/AlignPool/roi_util/csrc/cuda/nms.cu
+roi_util/__init__.py
+roi_util/nms.py
+roi_util/roi_align.py
+roi_util/roi_pool.py
+roi_util.egg-info/PKG-INFO
+roi_util.egg-info/SOURCES.txt
+roi_util.egg-info/dependency_links.txt
+roi_util.egg-info/top_level.txt
